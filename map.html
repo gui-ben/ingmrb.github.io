@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+
+        var data = google.visualization.arrayToDataTable([
+        	['Country', 'Number of contributors'],	  
+		['Albania', 1],
+		['Algeria', 1],
+		['Argentina', 9],
+		['Armenia', 5],
+		['Austria', 3],
+		['Azerbeijan', 2],
+		['Bahrain', 1],
+		['Bangladesh', 3],
+		['Belarus', 2],
+		['Bolivia', 1],
+		['Bosnia Herzegovina', 2],
+		['Brazil', 9],
+		['Bulgaria', 1],
+		['Canada', 1],
+		['Cambodia', 3],
+		['China', 2],
+		['Chile', 3],
+		['Colombia', 1],
+		['Costa Rica', 1],
+		['Croatia', 1],
+		['Egypt', 3],
+		['El Salvador', 2],
+		['France', 1],
+		['Georgia', 2],
+		['Germany', 2],
+		['Ghana', 5],
+		['Greece', 1],
+		['Guatemala', 1],
+		['Haiti', 1],
+		['Honduras', 1],
+		['Hungary', 1],
+		['India', 4],
+		['Indonesia', 10],
+		['Ireland', 1],
+		['Italy', 2],
+		['Ivory Coast', 1],
+		['Japan', 2],
+		['Jordan', 1],
+		['Kazakhistan', 1],
+		['Kenya', 5],
+		['Kosovo', 2],
+		['Latvia', 1],
+		['Macedonia', 1],
+		['Malaysia', 2],
+		['Mexico', 4],
+		['Moldova', 2],
+		['Mongolia', 1],
+		['Montenegro', 1],
+		['Morocco', 1],
+		['Namibia', 1],
+		['Nepal', 2],
+		['Netherlands', 1],
+		['Nigeria', 1],
+		['Norway', 15],
+		['Pakistan', 5],
+		['Palestine', 3],
+		['Panama', 1],
+		['Peru', 3],
+		['Phillipines', 3],
+		['Poland', 2],
+		['Portugal', 1],
+		['Romania', 4],
+		['Russia', 8],
+		['Serbia', 4],
+		['Singapore', 2],
+		['Slovenia', 1],
+		['South Africa', 1],
+		['South Korea', 2],
+		['Sri Lanka', 2],
+		['Sudan', 3],
+		['Sweden', 1],
+		['Taiwan', 1],
+		['Tanzania', 1],
+		['Thailand', 1],
+		['Turkey', 2],
+		['Ukraine', 7],
+		['United Kingdom', 2],
+		['United State', 7],
+		['Uganda', 4],
+		['Venezuela', 2],
+		['Vietnam', 4],
+		['Zimbabue', 1]
+	]);
+
+        var options = {
+           colorAxis: {colors: ['#8cff8c', '#447c44']},
+
+        };
+        
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
